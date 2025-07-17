@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🪐 Solana Wallet Inspector
 
-## Getting Started
+A powerful on-chain tool for tracking fund flows, memecoin holdings, and Binance interactions on the Solana blockchain — built with Next.js, TypeScript, and Solana Web3.
 
-First, run the development server:
+---
+
+## 🚀 Overview
+
+The **Solana Wallet Inspector** helps users trace the movement of SOL and tokens across wallets in real time. It’s ideal for:
+
+- Auditors
+- Analysts
+- DeFi researchers
+- Curious degens tracking their memecoin bags
+
+Built to give fast, readable insights into wallet activity with clean visuals and reporting support.
+
+---
+
+## ✅ Milestone 1 – Core Features
+
+### 🔍 Blockchain Analysis
+- **Token & SOL Balance Scanner**
+- **Wallet-to-wallet trace logic** (recursive up to 3 levels deep)
+- **Binance Wallet Detection**
+- **Memecoin Identifier** (`BONK`, `WIF`, `PEPE`, etc.)
+- **Transaction Instruction Summary**
+
+### 📊 Charts & Reporting
+- Pie/Bar charts for token distribution & transactions
+- Downloadable CSV & PDF exports
+- One-click full summary report
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js 15 + React 19 + Tailwind CSS
+- **Backend:** Next.js API Routes (app router)
+- **Blockchain:** `@solana/web3.js` + `@solana/spl-token`
+- **UI Tools:** Recharts, React Hot Toast, jsPDF
+
+---
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
+solana-wallet-inspector/
+├── app/
+│   └── api/
+│       ├── token-balances/route.ts
+│       ├── transactions/route.ts
+│       ├── trace/route.ts
+│       ├── memecoins-detection/route.ts
+│       └── binance-detection/route.ts
+├── components/
+│   ├── SolanaToolUI.tsx
+│   ├── TokenTable.tsx
+│   ├── PieChart.tsx
+│   └── BarChart.tsx
+├── lib/
+│   ├── solanaFunctions.ts
+│   └── binanceWallets.ts
+├── public/
+├── .env.local.example
+├── README.md
+└── ...
+⚙️ Setup Instructions
+1. Clone the Repo
+bash
+Copy code
+git clone https://github.com/obakas/Solana-wallet-tracker
+cd solana-wallet-inspector
+2. Configure Environment
+bash
+Copy code
+cp .env.local.example .env.local
+Edit .env.local to include your QuikNode or Solana RPC endpoint:
+
+ini
+Copy code
+NEXT_PUBLIC_QUIKNODE_RPC=https://your-rpc-endpoint...
+3. Install & Run
+bash
+Copy code
+yarn install
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit http://localhost:3000 to use the app.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📈 Coming in Milestone 2
+🔔 Real-time volume alerts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📡 Ghost token reactivation detection
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧠 Wallet clustering (KOLs/snipers/DEX whales)
 
-## Learn More
+🧬 Graph view of wallet relationships
 
-To learn more about Next.js, take a look at the following resources:
+🔌 Webhook alerts & export automation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧙 Author
+Obaka Idris
+Blockchain dev | Web3 inspector | Top-Rated+ Upwork freelancer
+🔗 Upwork Profile
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📜 License
+MIT — free to use, remix, and contribute. Credit appreciated but not enforced.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

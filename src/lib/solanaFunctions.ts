@@ -1,6 +1,6 @@
 import { Connection, PublicKey } from '@solana/web3.js';
 import { TOKEN_PROGRAM_ID } from '@solana/spl-token';
-import { BINANCE_WALLETS } from './binanceWallets.ts';
+import { BINANCE_WALLETS } from './binanceWallets';
 
 
 // if (!process.env.NEXT_PUBLIC_QUIKNODE_RPC) {
