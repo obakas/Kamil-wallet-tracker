@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Button } from './ui/Button';
+import { Button } from './UI/Button';
 import { FiCopy, FiExternalLink, FiSearch, FiDollarSign, FiAlertCircle, FiList, FiShare2, FiRefreshCw, FiDownload } from 'react-icons/fi';
-import { FaEthereum, FaBitcoin } from 'react-icons/fa';
+// import { FaEthereum, FaBitcoin } from 'react-icons/fa';
 import { SiSolana } from 'react-icons/si';
 import toast from 'react-hot-toast';
 import jsPDF from 'jspdf';
