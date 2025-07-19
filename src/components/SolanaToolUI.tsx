@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from './UI/Button';
 import { FiCopy, FiExternalLink, FiSearch, FiDollarSign, FiAlertCircle, FiList, FiShare2, FiRefreshCw, FiDownload } from 'react-icons/fi';
-// import { FaEthereum, FaBitcoin } from 'react-icons/fa';
 import { SiSolana } from 'react-icons/si';
 import toast from 'react-hot-toast';
 import jsPDF from 'jspdf';
@@ -498,7 +497,7 @@ export default function SolanaToolUI() {
                             <span className="text-yellow-400">🐸</span> {isMobile ? 'Memes' : 'Find Memecoins'}
                         </Button>
                         <Button
-                            variant="secondary"
+                            variant="primary"
                             onClick={() => callEndpoint('transactions')}
                             disabled={loading || !address}
                             isLoading={loading && activeTab === 'transactions'}
@@ -507,7 +506,7 @@ export default function SolanaToolUI() {
                             <FiList /> {isMobile ? 'TXs' : 'View Transactions'}
                         </Button>
                         <Button
-                            variant="secondary"
+                            variant="primary"
                             onClick={() => callEndpoint('trace')}
                             disabled={loading || !address}
                             isLoading={loading && activeTab === 'trace'}
@@ -516,7 +515,7 @@ export default function SolanaToolUI() {
                             <FiShare2 /> {isMobile ? 'Trace' : 'Trace Flow'}
                         </Button>
                         <Button
-                            variant="secondary"
+                            variant="primary"
                             onClick={() => callEndpoint('binance-detection')}
                             disabled={loading || !address}
                             isLoading={loading && activeTab === 'binance'}

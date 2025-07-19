@@ -8,7 +8,7 @@ import { BINANCE_WALLETS } from './binanceWallets';
 // }
 
 
-const RPC_ENDPOINT = process.env.NEXT_PUBLIC_ALCHEMY_M_API!;
+const RPC_ENDPOINT = process.env.NEXT_PUBLIC_QUIKNODE_RPC!;
 export const solanaConnection = new Connection(RPC_ENDPOINT);
 
 
